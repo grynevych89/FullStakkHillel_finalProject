@@ -1,0 +1,79 @@
+.subscribe {
+    background-color: $color-primaty;
+    padding: 30px 0;
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+
+        @media screen and (max-width: 992px) {
+            gap: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+
+            .subscribe__input:first-of-type {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+
+            .subscribe__input:first-of-type {
+                grid-column: 1;
+            }
+        }
+    }
+
+    &__input {
+        height: 60px;
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 0 20px;
+        font-family: $general-font;
+
+        &::placeholder {
+            color: rgba(white, 0.6);
+            font-size: 18px;
+            font-family: $general-font;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-accent-primary;
+        }
+    }
+
+    &__button {
+        height: 60px;
+        background-color: rgba($color-primaty, 0.5);
+        color: white;
+        border: 2px solid white;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        transition: background-color 0.4s ease;
+        font-family: $general-font;
+
+        &:hover {
+            background-color: $color-accent-primary;
+            border-color: $color-accent-primary;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-accent-primary;
+        }
+    }
+}

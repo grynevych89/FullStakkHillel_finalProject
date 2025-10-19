@@ -1,0 +1,109 @@
+.skills {
+    padding-bottom: 0;
+
+    &__container {
+        display: grid;
+        min-height: 100vh;
+        gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+            'html html css markup'
+            'webdesign qa qa codding'
+            'adaptability php seo codding';
+
+
+        @media screen and (max-width: 992px) {
+            grid-template-areas:
+                'html html css'
+                'markup webdesign webdesign'
+                'qa qa codding'
+                'adaptability php codding'
+                'adaptability seo seo';
+        }
+
+        @media screen and (max-width: 768px) {
+            grid-template-areas:
+                'html css'
+                'markup css'
+                'webdesign webdesign'
+                'qa codding'
+                'qa adaptability'
+                'php seo';
+        }
+
+        @media screen and (max-width: 576px) {
+            grid-template-areas:
+                'html'
+                'css'
+                'markup'
+                'webdesign'
+                'qa'
+                'codding'
+                'adaptability'
+                'php'
+                'seo';
+        }
+    }
+
+    &__item {
+        min-height: 350px;
+        position: relative;
+
+        &:first-of-type {
+            @include skills-background(html);
+        }
+
+        &:nth-of-type(2) {
+            @include skills-background(css);
+        }
+
+        &:nth-of-type(3) {
+            @include skills-background(markup);
+        }
+
+        &:nth-of-type(4) {
+            @include skills-background(webdesign);
+        }
+
+        &:nth-of-type(5) {
+            @include skills-background(qa);
+        }
+
+        &:nth-of-type(6) {
+            @include skills-background(codding);
+        }
+
+        &:nth-of-type(7) {
+            @include skills-background(adaptability);
+        }
+
+        &:nth-of-type(8) {
+            @include skills-background(php);
+        }
+
+        &:nth-of-type(9) {
+            @include skills-background(seo);
+        }
+    }
+
+    &__name {
+        @include flex-center;
+        position: relative;
+        background-color: rgba($color-primaty, 0.8);
+        height: 100%;
+        color: white;
+        transition: color 0.4s, background-color 0.4s;
+        font-size: 20px;
+        font-weight: bold;
+
+        &:hover {
+            color: $color-accent-primary;
+            background-color: rgba($color-primaty, 0.95);
+        }
+    }
+
+    &__button {
+        @include flex-center;
+        padding: 50px 0;
+    }
+}

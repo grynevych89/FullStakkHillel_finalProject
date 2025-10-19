@@ -1,0 +1,37 @@
+.footer {
+    @include flex-center;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 250px;
+    background-color: $color-primaty;
+    padding: 60px 0;
+
+    &__element {
+        width: 75px;
+        height: 2px;
+        background-color: rgba(white, 0.3);
+    }
+
+    &__text {
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__text-top {
+        display: block;
+        color: rgba(white, 0.3);
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    &__text-bottom {
+        display: block;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+}

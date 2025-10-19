@@ -1,0 +1,17 @@
+# Environments
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
